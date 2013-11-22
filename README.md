@@ -3,7 +3,7 @@ yomonger
 
 ![](http://j4p.us/image/0l1t1e453c2p/Screen%20Shot%202013-11-22%20at%2012.23.20%20AM.png)
 
-Meet yonger, a friendly little monster that lives in your computer. He loves two things:
+Meet yomonger (yo-modx-manager), a friendly little monster that lives in your computer. He loves two things:
  * asking you a couple questions
  * bootstrapping your MODX Manager theme
 
