@@ -1,7 +1,7 @@
 {
   "name": "generator-yomonger",
   "preferGlobal": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A yeoman generator for MODX Manager custom themes.",
   "keywords": [
     "yeoman-generator"
