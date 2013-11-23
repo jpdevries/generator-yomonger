@@ -9,7 +9,7 @@ yomonger
 Meet yomonger (yo-modx-manager), a friendly little monster that lives in your computer. He loves three things:
  * asking you a couple questions
  * bootstrapping your [MODX Manager theme][2]
- * being a [Yeoman generator][1]
+ * being a [Yeoman generator][1] 
 
 
 ## Getting Started
@@ -44,7 +44,7 @@ cd _build/templates
 mkdir custom-theme && cd $_
 ```
 
-Great. We are almost ready to let yomonger do his thing. But first, make note of your `manager/templates/custom-theme` directory relative to your build directory. It should be `../../../manager/templates/custom-theme`. By default yomonger will hop up three directories (you should see him do it to) and then scurry into the `manager/templates` directory looking for a folder with the name of your theme. If you want him to go somewhere else, you can tell him so but not until he asks.
+We are almost ready to let yomonger do his thing. But first, make note of your `manager/templates/custom-theme` directory relative to your build directory. It should be `../../../manager/templates/custom-theme`. By default yomonger will hop up three directories (you should see him do it to) and then scurry into the `manager/templates` directory looking for a folder with the name of your theme. If you want him to go somewhere else, you can tell him so but not until he asks.
 
 ## Generating a Project
 
