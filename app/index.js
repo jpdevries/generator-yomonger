@@ -7,14 +7,14 @@ var _s = require('underscore.string');
 var YomodageGenerator = module.exports = function YomodageGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
-  /*this.on('end', function () {
+  this.on('end', function () {
     this.installDependencies({
 	  skipInstall: options['skip-install'],
 	  callback: function() {
 		this.emit('dependenciesInstalled');
 	  }.bind(this)
     });
-  });*/
+  });
 
   this.on('dependenciesInstalled', function() {
       this.spawnCommand('grunt', ['build']);
