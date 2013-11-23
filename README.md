@@ -3,6 +3,7 @@ yomonger
 
 [1]:http://yeoman.io/generators.html
 [2]:https://github.com/modxcms/revolution/tree/develop/_build/templates/default#contribution-guides
+[3]:http://devries.jp/blog/2013/11/22/meet-yomonger/#watch-screencast
 
 ![](http://j4p.us/image/0l1t1e453c2p/Screen%20Shot%202013-11-22%20at%2012.23.20%20AM.png)
 
@@ -13,7 +14,7 @@ Meet yomonger (yo-modx-manager), a friendly little monster that lives in your co
 
 
 ## Getting Started
-The first thing we need to do, is make sure yomonger is happy. He is self consious about not being installed on every computer, but once he is setup on yours he is quickly satisfied.
+The first thing we need to do, is make sure yomonger is happy. He is self consious about not being installed on every computer, but once he is setup on yours he is quickly satisfied. If you need some more convicing, you can [watch a 3min screencast][3] on Yomonger in action.
 
 From your terminal, run:
 
