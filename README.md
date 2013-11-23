@@ -1,11 +1,15 @@
 yomonger
 ========
 
+[1]:http://yeoman.io/generators.html
+[2]:https://github.com/modxcms/revolution/tree/develop/_build/templates/default#contribution-guides
+
 ![](http://j4p.us/image/0l1t1e453c2p/Screen%20Shot%202013-11-22%20at%2012.23.20%20AM.png)
 
-Meet yomonger (yo-modx-manager), a friendly little monster that lives in your computer. He loves two things:
+Meet yomonger (yo-modx-manager), a friendly little monster that lives in your computer. He loves three things:
  * asking you a couple questions
- * bootstrapping your MODX Manager theme
+ * bootstrapping your [MODX Manager theme][2]
+ * being a [Yeoman generator][1]
 
 
 ## Getting Started
@@ -21,15 +25,22 @@ Now that you've installed yo and generator-yomonger globally you can use it from
 
 #### Creating a Theme Directory
 ```bash
-mkdir ~/Sites/modx/revolution/manager/templates/custom-theme
+# go to wherever your MODX install is
+cd ~/Sites/modx/revolution/
+# make a template directory
+mkdir manager/templates/custom-theme
 ```
+_Note: Manually creating the theme directory is optional. Yomonger will take it upon himself if necessary, but he just wants to make sure you know where your stuff will wind up._
 
 Great, that is where yomonger will assume he should create your project. Let's get him focused on the task at hand.
 
 #### Creating a build directory
 
 ```bash
-cd ~/Sites/modx/revolution/_build/templates
+# go to wherever your MODX install is
+cd ~/Sites/modx/revolution/
+# make a build directory
+cd _build/templates
 mkdir custom-theme && cd $_
 ```
 
