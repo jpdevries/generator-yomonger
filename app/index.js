@@ -3,6 +3,7 @@ var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
 var _s = require('underscore.string');
+var pathNames;
 
 var YomodageGenerator = module.exports = function YomodageGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
@@ -21,6 +22,7 @@ var YomodageGenerator = module.exports = function YomodageGenerator(args, option
   });
 
   this.pkg = JSON.parse(this.readFileAsString(path.join(__dirname, '../package.json')));
+  pathNames = this.destinationRoot().split(path.sep);
 };
 
 util.inherits(YomodageGenerator, yeoman.generators.Base);
@@ -35,7 +37,9 @@ YomodageGenerator.prototype.askFor = function askFor() {
   {
 	name : 'name',
 	message : 'What would you like to name your template?',
-	default : 'modxtheme'
+	default : function(props) {
+      return pathNames[pathNames.length-1];
+	}
   },
   {
     name : 'description',
@@ -133,7 +137,7 @@ YomodageGenerator.prototype.askFor = function askFor() {
     this.useTpl = props.useTpl;
 	this.slug = _s.slugify(props.name);
     this.templateDir = (props.templateDir.slice(-1) == '/') ? props.templateDir : props.templateDir + '/';
-    this.themeDir = this.templateDir + this.slug;
+    this.themeDir = this.templateDir + this.slug + '/';
     this.authorName = props.authorName;
     this.authorEmail = props.authorEmail;
     this.authorUrl = props.authorUrl;
