@@ -1,0 +1,33 @@
+{
+  "name": "<%= _.slugify(name) %>",
+  "version": "0.0.0",
+  "author": {
+    "name": "JP DeVries",
+    "url": "http://devries.jp/"
+  },
+  "homepage": "https://github.com/modxcms/revolution/tree/develop/_build/templates/default",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/modxcms/revolution.git"
+  },
+  "bugs": {
+    "url": "http://bugs.modx.com/projects/revo"
+  },
+  "dependencies": {
+	<% if (modxSass) { %>
+    "bourbon": "*",
+    "font-awesome": "~3.2.1"
+  <% } %>
+  },
+  "exportsOverride": {
+	<% if (modxSass) { %>
+    "bourbon": {
+      "": "app/assets/stylesheets/"
+    },
+    "font-awesome": {
+      "scss": ["scss"],
+      "font": ["font"]
+    }
+    <% } %>
+  }
+}

@@ -1,0 +1,157 @@
+/* MODX MANAGER SEARCH */
+#<%= prefix %>navbar #<%= prefix %>manager-search { /* #shame */
+  padding: 5px 8px 5px 0;
+}
+
+#<%= prefix %>navbar #<%= prefix %>manager-search:hover { /* #shame */
+  background: none;
+  border-color: transparent;
+}
+
+#<%= prefix %>manager-search .x-form-trigger {
+  background: lighten($primaryAction,5%);
+  color: #fff;
+  cursor: default;
+  height: 16px;
+  right: 0;
+  border-radius: 0;
+  border: none;
+  padding: 7px 4px 9px 7px;
+  width: 17px;
+}
+
+#<%= prefix %>manager-search .x-form-field-wrap {
+  background: $white;
+  border:1px solid $borderColor !important; /* #shame */
+  border-radius:4px;
+  overflow:hidden;
+  color: #565353;
+  font-size: 12px;
+  outline: none !important;
+  text-shadow: none;
+}
+
+#<%= prefix %>manager-search .x-form-field-trigger-wrap {
+  border-width: 0;
+  height: auto;
+}
+
+#<%= prefix %>manager-search .x-form-field-wrap:hover,
+#<%= prefix %>manager-search .x-trigger-wrap-focus {
+  /*@include transition(background-color, 360ms, ease-in);
+  @include transition-delay(0);
+  background: $gainsboro;*/
+}
+
+#<%= prefix %>uberbar {
+  margin-right: 20px;
+}
+
+#<%= prefix %>manager-search .x-form-empty-field {
+  color: #bbb;
+  font-weight: normal;
+  text-shadow: none;
+}
+
+.<%= prefix %>-manager-search-results {
+  @include box-sizing(border-box);
+  background: rgba(240, 240, 240, 0.95);
+  border-radius: 0 0 2px 2px;
+  border: $borderColor;
+  box-shadow: $shadower;
+  height: auto !important;
+  margin: 1px 0 0 -2px;
+  left: 20px;
+  position: relative;
+  width: 450px !important;
+}
+
+.<%= prefix %>-manager-search-results .x-combo-list-inner {
+  width: 100% !important;
+  border:1px solid $borderColor;
+  border-top:none;
+  @include box-sizing(border-box);
+  overflow:hidden;
+}
+
+.<%= prefix %>-manager-search-results .section {
+  background-color: #f9f9f9;
+  border-left: 1px solid #e5e5e5;
+  font-size: 13px;
+  margin-left: 116px;
+  position: relative;
+}
+
+.<%= prefix %>-manager-search-results .x-combo-selected h3 {
+  left: 0;
+}
+
+.<%= prefix %>-manager-search-results h3,
+.<%= prefix %>-manager-search-results p {
+  line-height: 17px;
+  margin: 0;
+  padding: 4px 8px;
+}
+
+.<%= prefix %>-manager-search-results p {
+	@extend %nav-item;
+}
+
+.<%= prefix %>-manager-search-results h3 {
+  color: #aaa;
+  font-size: .85em;
+  font-weight: normal;
+  left: -116px;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 95px;
+}
+
+.<%= prefix %>-manager-search-results a {
+  cursor: pointer;
+  display: inline-block;
+  padding-left: 18px;
+  position: relative;
+}
+
+.<%= prefix %>-manager-search-results i {
+  color: $colorSplash;
+  left: 0;
+  position: absolute;
+  top: 2px;
+}
+
+.<%= prefix %>-manager-search-results em {
+  font-style: normal;
+  opacity: 0.5;
+}
+
+.<%= prefix %>-manager-search-results .x-combo-selected h3,
+.<%= prefix %>-manager-search-results .x-combo-selected p,
+.<%= prefix %>-manager-search-results .x-combo-selected i {
+  color: #fff;
+}
+
+.<%= prefix %>-manager-search-results .x-combo-selected p {
+  border-left-color: transparent;
+}
+
+.<%= prefix %>-manager-search-results .x-combo-selected {
+  background-color: $colorSplash !important;
+  border: none;
+  color: #fff !important;
+  margin-left: 0;
+  //padding-left: 117px;
+}
+
+.<%= prefix %>-manager-search-results .icon-user {
+  background-image: none !important;
+}
+
+.<%= prefix %>-manager-search-results .x-combo-selected {
+  background-color: $colorSplash !important;
+  box-shadow: inset 0 -1px 1px darken($colorSplash, 10%), inset 0 1px 1px lighten($colorSplash, 10%);
+  color: #fff !important;
+  z-index: 10;
+}

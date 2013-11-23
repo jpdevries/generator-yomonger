@@ -1,0 +1,34 @@
+{
+  "name": "<%= _.slugify(name) %>",
+  <% if (authorName) { %>"author":"<%= authorName %><% if (authorEmail) { %> <<%= authorEmail %>><% } %>",<% } %>
+  "description": "<%= description %>",
+  "version": "0.0.0",
+  <% if (gitRepo) { %>
+  "repository": {
+    "type": "git",
+    "url": "<%= gitRepo %>"
+  },
+  <% } %>
+  "keywords": [
+    "MODX",
+    "Manager"
+  ],
+  "dependencies": {
+    "grunt": "~0.4.1",
+    "grunt-bower-task": "~0.3.1",
+    "grunt-rename": "~0.1.2",
+    "grunt-contrib-watch": "~0.5.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-growl": "~0.1.5",
+    <% if ('sass' === cssType) { %>
+	"grunt-contrib-sass": "~0.5.0",
+	<% } else if ('less' === cssType) {  %>
+	"grunt-contrib-less": "~0.8.2",
+	<% } %>
+    "grunt-autoprefixer": "~0.3.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-csslint": "~0.1.2",
+    "grunt-contrib-cssmin": "~0.6.1"
+  },
+  "license": "MIT"
+}
