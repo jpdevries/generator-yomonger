@@ -5,7 +5,7 @@ var yeoman = require('yeoman-generator');
 var _s = require('underscore.string');
 var pathNames;
 
-var YomodageGenerator = module.exports = function YomodageGenerator(args, options, config) {
+var YomongerGenerator = module.exports = function YomongerGenerator(args, options, config) {
   yeoman.generators.Base.apply(this, arguments);
 
   this.on('end', function () {
@@ -25,9 +25,9 @@ var YomodageGenerator = module.exports = function YomodageGenerator(args, option
   pathNames = this.destinationRoot().split(path.sep);
 };
 
-util.inherits(YomodageGenerator, yeoman.generators.Base);
+util.inherits(YomongerGenerator, yeoman.generators.Base);
 
-YomodageGenerator.prototype.askFor = function askFor() {
+YomongerGenerator.prototype.askFor = function askFor() {
   var cb = this.async();
 
   // have Yeoman greet the user.
@@ -164,7 +164,7 @@ YomodageGenerator.prototype.askFor = function askFor() {
   }.bind(this));
 };
 
-YomodageGenerator.prototype.app = function app() {
+YomongerGenerator.prototype.app = function app() {
   this.template('_package.json', 'package.json');
   this.template('_bower.json', 'bower.json');
   this.template('_Gruntfile.js', 'Gruntfile.js');
@@ -182,7 +182,7 @@ YomodageGenerator.prototype.app = function app() {
   }
 };
 
-YomodageGenerator.prototype.projectfiles = function projectfiles() {
+YomongerGenerator.prototype.projectfiles = function projectfiles() {
   this.copy('editorconfig', '.editorconfig');
   this.copy('jshintrc', '.jshintrc');
 };
