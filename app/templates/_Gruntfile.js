@@ -225,7 +225,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-csslint');
 
 	// Tasks
-	grunt.registerTask('default', [<% if ('sass' === cssType) { %>'sass:dist', <% } else if ('less' === cssType) {  %>'less:dist', <% } %> 'autoprefixer', 'growl:prefixes', <% if ('sass' === cssType) { %>'growl:sass', <% } else if ('less' === cssType) {  %>'growl:less', <% } %> 'cssmin:compress', 'growl:watch', 'watch']);
+	grunt.registerTask('default', ['growl:watch', 'watch']);
 	grunt.registerTask('build', [<% if (modxSass) { %>'clean:prebuild',<% } %>'bower', <% if (modxSass) { %>'copy',<% } %> <% if ('sass' === cssType) { %>'sass:dist', <% } else if ('less' === cssType) {  %>'less:dist', <% } %>'autoprefixer', 'growl:prefixes', <% if ('sass' === cssType) { %>'growl:sass', <% } else if ('less' === cssType) {  %>'growl:less', <% } %>'cssmin:compress'<% if (modxSass) { %>,'clean:postbuild'<% } %>]);
 	grunt.registerTask('expand', [<% if ('sass' === cssType) { %>'sass:dev', <% } else if ('less' === cssType) {  %>'less:dev', <% } %> 'autoprefixer', 'growl:prefixes', 'growl:sass', 'growl:expand']);
 	grunt.registerTask('ship', [<% if (modxSass) { %>'clean:prebuild','bower',<% } %> <% if (modxSass) { %>'copy',<% } %> <% if ('sass' === cssType) { %>'sass:dist', <% } else if ('less' === cssType) {  %>'less:dist', <% } %>,'autoprefixer', 'growl:prefixes', <% if ('sass' === cssType) { %>'growl:sass', <% } else if ('less' === cssType) {  %>'growl:less', <% } %>'cssmin:ship'<% if (modxSass) { %>,'clean:postbuild'<% } %>]);
