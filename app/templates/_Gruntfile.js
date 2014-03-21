@@ -107,7 +107,8 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					style: 'expanded',
-					compass: false
+					compass: false,
+                    sourcemap:true
 				},
 				files: {
 					'<%%= dirs.css %>index.css': 'sass/index.scss',
