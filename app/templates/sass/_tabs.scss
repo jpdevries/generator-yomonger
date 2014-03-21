@@ -5,7 +5,7 @@
   margin: 20px 0 10px;
   overflow: visible;
 
-  #<%= prefix %>leftbar & {
+  #modx-leftbar & {
     background-color: $gainsboro;
   }
 
@@ -13,7 +13,7 @@
   .x-tab-panel-body-noborder {
     background-color: $white;
 
-    #<%= prefix %>leftbar & {
+    #modx-leftbar & {
       background-color: $white;
     }
   }
@@ -93,7 +93,7 @@ ul.x-tab-strip-top {
 .x-tab-strip .x-tab-strip-closable a.x-tab-strip-close {
   right: 8px;
   top: 11px;
-  background-image: url(../images/<%= prefix %>theme/tabs/tab-close.gif);
+  background-image: url(../images/modx-theme/tabs/tab-close.gif);
 }
 
 ul.x-tab-strip-top li:first-child {
@@ -106,18 +106,18 @@ ul.x-tab-strip-bottom {
   border-top-color: #dfdfdf;
 
   & .x-tab-right {
-    background-image: url(../images/<%= prefix %>theme/tabs/tab-btm-inactive-right-bg.gif);
+    background-image: url(../images/modx-theme/tabs/tab-btm-inactive-right-bg.gif);
   
     & .x-tab-right {
-      background-image: url(../images/<%= prefix %>theme/tabs/tab-btm-right-bg.gif);
+      background-image: url(../images/modx-theme/tabs/tab-btm-right-bg.gif);
     }
     & .x-tab-left {
-      background-image: url(../images/<%= prefix %>theme/tabs/tab-btm-left-bg.gif);
+      background-image: url(../images/modx-theme/tabs/tab-btm-left-bg.gif);
     }
   }
 
   & .x-tab-left {
-    background-image: url(../images/<%= prefix %>theme/tabs/tab-btm-inactive-left-bg.gif);
+    background-image: url(../images/modx-theme/tabs/tab-btm-inactive-left-bg.gif);
   }
 
 }
@@ -137,7 +137,7 @@ ul.x-tab-strip-bottom {
 }
 
 .x-tab-scroller-left {
-  background-image: url(../images/<%= prefix %>theme/tabs/scroll-left.gif);
+  background-image: url(../images/modx-theme/tabs/scroll-left.gif);
   border-bottom-color: #dfdfdf;
 }
 
@@ -156,7 +156,7 @@ ul.x-tab-strip-bottom {
 }
 
 .x-tab-scroller-right {
-  background-image: url(../images/<%= prefix %>theme/tabs/scroll-right.gif);
+  background-image: url(../images/modx-theme/tabs/scroll-right.gif);
   border-bottom-color: #dfdfdf;
 }
 
@@ -196,7 +196,7 @@ ul.x-tab-strip-bottom {
   width: 150px !important;
   margin-left:0;
   & ul {
-    border-top: 1px solid #E0E0E0;
+    border-top: 1px solid transparent;
     width: auto;
     border-bottom-color:transparent;
   }
@@ -227,10 +227,10 @@ ul.x-tab-strip-bottom {
 }
 
 .vertical-tabs-header ul.x-tab-strip-top li.x-tab-strip-active {
-  background: #fff !important;
-  border-width: 0 0 1px;
+  background: $white !important;
+  /*border-width: 0 0 1px;*/
   color: #555;
-  padding-bottom: 5px !important;
+  /*padding-bottom: 5px !important;*/
   text-shadow: none;
 }
 

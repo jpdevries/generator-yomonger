@@ -1,5 +1,5 @@
 /* Main MODX Manager navbar */
-#<%= prefix %>navbar {
+#modx-navbar {
   background: $navbarBg;
   border-width: 0 0 1px;
   border-bottom: 1px solid $borderColor;
@@ -9,25 +9,25 @@
   z-index: 10;
 }
 
-#<%= prefix %>user-menu {
+#modx-user-menu {
   float: right;
   margin-right: 15px;
 }
 
-#<%= prefix %>navbar {
+#modx-navbar {
   font-weight: bold;
   font: $fontNormal;
 }
 
-#<%= prefix %>topnav {
+#modx-topnav {
   float: left;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#<%= prefix %>navbar li,
-#<%= prefix %>navbar a {
+#modx-navbar li,
+#modx-navbar a {
   background: transparent;
   float: left;
   margin: 0;
@@ -35,11 +35,11 @@
   position: relative;
 }
 
-#<%= prefix %>navbar li:hover {
+#modx-navbar li:hover {
   z-index: 10000;
 }
 
-#<%= prefix %>navbar a {
+#modx-navbar a {
   color: $navbarText;
   cursor: pointer;
   display: block;
@@ -48,16 +48,16 @@
   text-decoration: none; 
 }
 
-#<%= prefix %>topnav li.top > a {
+#modx-topnav li.top > a {
   cursor: default;
 }
 
-#<%= prefix %>topnav > li.top > a, #<%= prefix %>user-menu > li.top > a {
+#modx-topnav > li.top > a, #modx-user-menu > li.top > a {
   border-left:1px solid transparent; 
   border-right:1px solid transparent;
 }
 
-#<%= prefix %>topnav > li.top:hover > a, #<%= prefix %>user-menu > li.top:hover > a {
+#modx-topnav > li.top:hover > a, #modx-user-menu > li.top:hover > a {
   border-left-color:$borderColor;
   border-right-color:$borderColor;
   background: $white;
@@ -65,20 +65,20 @@
   z-index: 10001;
 }
 
-#<%= prefix %>navbar li:hover a {
+#modx-navbar li:hover a {
   background-color: $white;
-  &:hover.<%= prefix %>-help {
+  &:hover.modx-help {
     color: $colorSplash;
   }
 }
 
-#<%= prefix %>navbar #limenu-admin ul.<%= prefix %>-subnav,
-#<%= prefix %>navbar #limenu-user ul.<%= prefix %>-subnav {
+#modx-navbar #limenu-admin ul.modx-subnav,
+#modx-navbar #limenu-user ul.modx-subnav {
   left: auto;
   right: 0;
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav {
+#modx-navbar ul.modx-subnav {
   display: none;
   float: left;
   left: 0;
@@ -91,15 +91,15 @@
   z-index: 10000;
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav, #<%= prefix %>navbar ul.<%= prefix %>-subsubnav {
+#modx-navbar ul.modx-subnav, #modx-navbar ul.modx-subsubnav {
   border-radius: 0 0 $navbarRadius $navbarRadius;
   border-top: none;
   border: 1px solid $borderColor;
   box-shadow: $shadower;
 }
 
-#<%= prefix %>navbar #<%= prefix %>home-dashboard {
-  @include retina-image("../images/<%= prefix %>logo", 32px 33px);
+#modx-navbar #modx-home-dashboard {
+  @include retina-image("../images/modx-logo", 32px 33px);
   background-position:center center;
   background-repeat:no-repeat;
   width: 50px;
@@ -114,26 +114,26 @@
 #user-username {
 }
 
-#<%= prefix %>navbar #<%= prefix %>home-dashboard a {
+#modx-navbar #modx-home-dashboard a {
   overflow: hidden;
   padding: 0;
   text-indent: -9999px;
   width: 100%;
 }
 
-#<%= prefix %>navbar #<%= prefix %>home-dashboard:hover a {
+#modx-navbar #modx-home-dashboard:hover a {
   background-color: transparent;
 }
 
-#<%= prefix %>navbar #<%= prefix %>home-dashboard:hover {
+#modx-navbar #modx-home-dashboard:hover {
   /*background-color: $navbarHover;*/
 }
 
-#<%= prefix %>navbar li:hover ul.<%= prefix %>-subnav {
+#modx-navbar li:hover ul.modx-subnav {
   display: block;
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav li {
+#modx-navbar ul.modx-subnav li {
   background: $white;
   border-bottom: 1px solid $navbarHover;
   clear: both;
@@ -142,12 +142,12 @@
 }
 
 /*
-#<%= prefix %>navbar ul.<%= prefix %>-subnav li:first-child a {
+#modx-navbar ul.modx-subnav li:first-child a {
   @include background(linear-gradient($navbarHover, $navbarDrop) top repeat);
 }
 */
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav li a {
+#modx-navbar ul.modx-subnav li a {
   background-color: $white;
   float: left;
   font-weight: bold;
@@ -159,13 +159,13 @@
 }
 
 /*
-#<%= prefix %>navbar ul.<%= prefix %>-subnav li a {
+#modx-navbar ul.modx-subnav li a {
   border-top:1px solid $navbarDrop;
   border-bottom:1px solid $navbarDrop;	
 }
 */
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav li {
+#modx-navbar ul.modx-subnav li {
   a:hover {
     background: $gainsboro;
     border-top-color:$borderColor;
@@ -179,7 +179,7 @@
   }
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav li a span {
+#modx-navbar ul.modx-subnav li a span {
   display: block;
   float: none;
   font-size: 12px;
@@ -189,7 +189,7 @@
   width: 100%;
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul {
+#modx-navbar ul.modx-subnav ul {
   display: none;
   left: 270px;
   list-style: none;
@@ -199,35 +199,35 @@
   z-index: 24;
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul li:first-child,
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul li:first-child a {
+#modx-navbar ul.modx-subnav ul li:first-child,
+#modx-navbar ul.modx-subnav ul li:first-child a {
   border-radius: 0 2px 0 0;
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul li:last-child,
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul li:last-child a {
+#modx-navbar ul.modx-subnav ul li:last-child,
+#modx-navbar ul.modx-subnav ul li:last-child a {
   border-radius: 0 0 2px 0;
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul ul li:last-child,
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul ul li:last-child a {
+#modx-navbar ul.modx-subnav ul ul li:last-child,
+#modx-navbar ul.modx-subnav ul ul li:last-child a {
   border-radius: 0 0 2px 2px;
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav li:hover ul ul,
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul li:hover ul ul,
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul ul li:hover ul ul {
+#modx-navbar ul.modx-subnav li:hover ul ul,
+#modx-navbar ul.modx-subnav ul li:hover ul ul,
+#modx-navbar ul.modx-subnav ul ul li:hover ul ul {
   display: none;
 }
 
-#<%= prefix %>navbar ul.<%= prefix %>-subnav li:hover ul,
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul li:hover ul,
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul ul li:hover ul,
-#<%= prefix %>navbar ul.<%= prefix %>-subnav ul ul ul li:hover ul {
+#modx-navbar ul.modx-subnav li:hover ul,
+#modx-navbar ul.modx-subnav ul li:hover ul,
+#modx-navbar ul.modx-subnav ul ul li:hover ul,
+#modx-navbar ul.modx-subnav ul ul ul li:hover ul {
   display: block;
 }
 
-.ext-ie7 #<%= prefix %>header {
+.ext-ie7 #modx-header {
   position: relative;
   z-index: 10;
 }

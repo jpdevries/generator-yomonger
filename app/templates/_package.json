@@ -14,21 +14,21 @@
     "Manager"
   ],
   "dependencies": {
-    "grunt": "~0.4.1",
-    "grunt-bower-task": "~0.3.1",
-    "grunt-rename": "~0.1.2",
-    "grunt-contrib-watch": "~0.5.2",
-    <% if (modxSass) { %>"grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-copy": "~0.4.1",<% } %>
-    "grunt-growl": "~0.1.5",
+    "grunt": "^0.4.4",
+    "grunt-bower-task": "^0.3.4",
+    "grunt-rename": "^0.1.3",
+    "grunt-contrib-watch": "^0.6.1",
+    <% if (modxSass) { %>"grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-copy": "^0.5.0",<% } %>
+    "grunt-growl": "^0.1.5",
     <% if ('sass' === cssType) { %>
-	"grunt-contrib-sass": "~0.5.0",
+	"grunt-contrib-sass": "^0.7.3",
 	<% } else if ('less' === cssType) {  %>
-	"grunt-contrib-less": "~0.8.2",
+	"grunt-contrib-less": "^0.11.0",
 	<% } %>
-    "grunt-autoprefixer": "~0.3.0",
-    "grunt-contrib-csslint": "~0.1.2",
-    "grunt-contrib-cssmin": "~0.6.1"
+    "grunt-autoprefixer": "^0.7.2",
+    "grunt-contrib-csslint": "^0.2.0",
+    "grunt-contrib-cssmin": "^0.9.0"
   },
   "license": "MIT"
 }
