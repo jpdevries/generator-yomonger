@@ -113,13 +113,13 @@ hr {
 }
 
 /* panel setups */
-#<%= prefix %>leftbar, 
-#<%= prefix %>content, 
-#<%= prefix %>footer {
+#modx-leftbar, 
+#modx-content, 
+#modx-footer {
   position: absolute;
 }
 
-.<%= prefix %>-form p {
+.modx-form p {
   padding-bottom: 10px;
 }
 
@@ -127,11 +127,11 @@ hr {
   left: 2px;
 }
 
-#<%= prefix %>content {
+#modx-content {
   background: $mainBg;
 }
 
-#<%= prefix %>resource-tabs {
+#modx-resource-tabs {
 	@extend %shaded-tab-box;
 	.x-tab-panel-header {
 		border:1px solid $gainsboro;
@@ -152,26 +152,30 @@ hr {
 			
 		}
 	}
-	#<%= prefix %>tv-tabs {	
+	#modx-tv-tabs {	
 		border-left:0;
 		border-right:0;
 	}
 }
 
-#<%= prefix %>resource-tvs-div #<%= prefix %>tv-tabs, #<%= prefix %>resource-tabs #<%= prefix %>tv-tabs {	
+#modx-resource-tvs-div #modx-tv-tabs, #modx-resource-tabs #modx-tv-tabs {	
 	.x-tab-strip {
+		margin-top:12px;
 		li {
 			width:100% !important; /* #shame */
 			margin-left:0;
+			border-bottom:1px solid $borderColor;
+			&:nth-last-child(3) { border-color:transparent }
+			&.x-tab-strip-active { border-bottom:1px solid $borderColor; }
 		}
 	}
 }
 
-#<%= prefix %>resource-content {
+#modx-resource-content {
 	@extend %shaded-box;
 }
 
-#<%= prefix %>content-above, #<%= prefix %>content-below {
+#modx-content-above, #modx-content-below {
 	.x-panel-bwrap {
 		border:none;
 	}
@@ -206,7 +210,7 @@ hr {
 	}
 }
 
-#<%= prefix %>container {
+#modx-container {
   height: 100%;
   width: 100%;
 }
@@ -230,7 +234,7 @@ hr {
 }
 
 /* collapse for resource panel */
-#<%= prefix %>resource-tabs .x-tool-toggle {
+#modx-resource-tabs .x-tool-toggle {
   margin-top: 0;
   position: absolute;
   right: 20px;
@@ -239,16 +243,16 @@ hr {
 }
 
 /* panel stylings */
-.<%= prefix %>-page-header, .<%= prefix %>-page-header div {
+.modx-page-header, .modx-page-header div {
   background-color: transparent !important;
 }
 
-#<%= prefix %>content form.x-panel-body {
+#modx-content form.x-panel-body {
   background-color: transparent !important;
 }
 
 /* TODO: remove it */
-#<%= prefix %>mainpanel {
+#modx-mainpanel {
   height: 100%;
   position: relative;
 }
@@ -294,26 +298,30 @@ hr {
 
 /* console */
 
-.<%= prefix %>-console .debug {
+.modx-console .debug {
   color: gray;
 }
 
-.<%= prefix %>-console .success {
+.modx-console .success {
   color: $green;
 }
 
-.<%= prefix %>-console .warn {
+.modx-console .warn {
   color: blue;
 }
 
-.<%= prefix %>-console .error {
+.modx-console .error {
   color: $red;
 }
 
-.<%= prefix %>-console-text {
+.modx-console-text {
   background-color: white;
   font: 11px $codefonts !important;
   padding: 8px;
+}
+
+.x-form-text.modx-console-text {
+  height: auto;
 }
 
 /* portlets */
@@ -530,7 +538,7 @@ hr {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, gainsboro));
   background: -webkit-linear-gradient(center bottom, gainsboro 0%, #fcfcfc 100%);
   background: linear-gradient(center bottom, gainsboro 0%, #fcfcfc 100%);
-  background: url("/manager/templates/default/images/<%= prefix %>theme/form/button-bg.png") repeat-x scroll 0 bottom gainsboro;
+  background: url("/manager/templates/default/images/modx-theme/form/button-bg.png") repeat-x scroll 0 bottom gainsboro;
   border-collapse: separate;
   border-color: #CACACA #C0C0C0 #AAA;
   border-radius: 3px;
@@ -768,7 +776,7 @@ hr {
 }
 
 /* status messages */
-.<%= prefix %>-status-msg {
+.modx-status-msg {
   background: #f4f4f4;
   border-radius: 4px;
   left: 70%;
@@ -786,19 +794,19 @@ iframe[classname="x-hidden"] {
   visibility: hidden;
 }
 
-/*.<%= prefix %>-property-description {
+/*.modx-property-description {
     padding: 8px 11px 3px;
 }*/
 
 /* tag tv widget */
-ul.<%= prefix %>-tag-list {
+ul.modx-tag-list {
   list-style: none;
   margin: 3px 0 0 0;
   overflow: auto;
   padding: 0;
 }
 
-ul.<%= prefix %>-tag-list li {
+ul.modx-tag-list li {
   cursor: pointer;
   float: left;
   list-style: none;
@@ -807,7 +815,7 @@ ul.<%= prefix %>-tag-list li {
   text-decoration: underline;
 }
 
-ul.<%= prefix %>-tag-list li.<%= prefix %>-tag-checked {
+ul.modx-tag-list li.modx-tag-checked {
   background-color: #779937;
   border-radius: 10px;
   color: white;
@@ -817,22 +825,22 @@ ul.<%= prefix %>-tag-list li.<%= prefix %>-tag-checked {
 /* tv reload btn */
 
 /* TODO: is it used? */
-.<%= prefix %>-tv-reload-btn {
+.modx-tv-reload-btn {
   float: right;
   position: absolute;
   right: 19px;
   z-index: 10;
 }
 
-.<%= prefix %>-tv-reload-btn div {
+.modx-tv-reload-btn div {
   z-index: 10;
 }
 
-.<%= prefix %>-tv-th label {
+.modx-tv-th label {
   cursor: pointer;
 }
 
-.<%= prefix %>-tv-th .tv-description {
+.modx-tv-th .tv-description {
   color: #444;
   font-size: 11px;
   font-weight: normal;
@@ -1070,7 +1078,7 @@ body.ext-ie7 .x-superboxselect-item {
 }
 
 /* other */
-.<%= prefix %>-tree-load-msg {
+.modx-tree-load-msg {
   color: $mainText;
   font-size: .9em;
   line-height: 1;
@@ -1078,7 +1086,7 @@ body.ext-ie7 .x-superboxselect-item {
   white-space: pre-line;
 }
 
-/*.<%= prefix %>-policy-permissions-grid td {
+/*.modx-policy-permissions-grid td {
     cursor: pointer;
 }*/
 
@@ -1167,7 +1175,7 @@ body.ext-ie7 .x-superboxselect-item {
   /* margin-top: -1px; */
 }
 
-/* Realign <%= prefix %>tabs for getPageStructure */
+/* Realign modx-tabs for getPageStructure */
 
 /* Panel description text */
 .panel-desc {
@@ -1233,41 +1241,41 @@ body.ext-ie7 .x-superboxselect-item {
 }*/
 
 /* tv table */
-#<%= prefix %>tv-tabs {
+#modx-tv-tabs {
   width: 100%;
   @extend %clearfix;
 }
 
-.<%= prefix %>-tv {
+.modx-tv {
   border-bottom: 1px solid #f4f4f4;
   margin: 0;
   padding: 15px 0 !important;
   width: 100%;
 }
 
-#<%= prefix %>tv-tabs .tv-first {
+#modx-tv-tabs .tv-first {
   padding-top: 0 !important;
 }
 
-#<%= prefix %>tv-tabs .tv-last {
+#modx-tv-tabs .tv-last {
   border-bottom: 0 !important;
   padding-bottom: 0 !important;
 }
 
-.<%= prefix %>-tv-label {
+.modx-tv-label {
   float: left;
   width: auto !important;
 }
 
-.<%= prefix %>-tv-label:hover .<%= prefix %>-tv-reset {
+.modx-tv-label:hover .modx-tv-reset {
   opacity: 100;
 }
 
-.<%= prefix %>-tv-label-title {
+.modx-tv-label-title {
   float: left;
 }
 
-.<%= prefix %>-tv-label-description {
+.modx-tv-label-description {
   display: block;
   float: left;
   font-style: italic;
@@ -1275,7 +1283,7 @@ body.ext-ie7 .x-superboxselect-item {
   padding-left: 5px;
 }
 
-.<%= prefix %>-tv-reset {
+.modx-tv-reset {
   background: url(../images/restyle/icons/arrow_rotate_anticlockwise.png) top right no-repeat;
   cursor: pointer;
   float: left;
@@ -1284,14 +1292,14 @@ body.ext-ie7 .x-superboxselect-item {
   width: 16px;
 }
 
-.<%= prefix %>-tv-description {
+.modx-tv-description {
   color: #666;
   font-size: 10px;
   line-height: 1.2;
   margin-top: 2px !important;
 }
 
-.<%= prefix %>-tv-inherited {
+.modx-tv-inherited {
   color: #666;
   display: block;
   float: right;
@@ -1301,16 +1309,16 @@ body.ext-ie7 .x-superboxselect-item {
   padding-top: 4px;
 }
 
-#<%= prefix %>resource-settings .<%= prefix %>-tv-label, 
-#<%= prefix %>page-settings .<%= prefix %>-tv-label {
+#modx-resource-settings .modx-tv-label, 
+#modx-page-settings .modx-tv-label {
   width: 216px;
 }
 
-.<%= prefix %>-tv .x-form-check-wrap {
+.modx-tv .x-form-check-wrap {
   line-height: 14px !important;
 }
 
-.<%= prefix %>-tv .x-form-cb-label {
+.modx-tv .x-form-cb-label {
   font-weight: normal;
   top: 0;
 }
@@ -1319,21 +1327,21 @@ body.ext-ie7 .x-superboxselect-item {
   padding: 0;
 }
 
-#<%= prefix %>resource-tvs-div {
+#modx-resource-tvs-div {
   border-top-width: 0;
 }
 
-#<%= prefix %>resource-tvs-div.below-content {
+#modx-resource-tvs-div.below-content {
   border-top-width: 1px;
   margin-top: 10px;
 }
 
-.<%= prefix %>-permissions-list {
+.modx-permissions-list {
   color: #777;
   font-size: 12px;
 }
 
-.<%= prefix %>-permissions-list-textarea {
+.modx-permissions-list-textarea {
   background-color: transparent !important;
   border: 0 !important;
 }
@@ -1561,13 +1569,13 @@ body.ext-ie7 .x-superboxselect-item {
   color: gray;
   opacity: .5;
 }
-#<%= prefix %>grid-package .green {
+#modx-grid-package .green {
   text-align: center;
 }
-#<%= prefix %>grid-package .green a {
+#modx-grid-package .green a {
   color: $red !important;
 }
-#<%= prefix %>grid-package .red {
+#modx-grid-package .red {
   color: $green !important;
   text-align: center;
 }
@@ -1677,11 +1685,11 @@ body.ext-ie7 .x-superboxselect-item {
   clear: right;
   margin-right: 0 !important;
 }
-.<%= prefix %>-pb-view-ct {
+.modx-pb-view-ct {
   background: white;
   font: $fontSmall;
 }
-.<%= prefix %>-pb-thumb {
+.modx-pb-thumb {
   border: 1px solid #dddddd;
   height: 80px;
   line-height: 80px;
@@ -1689,73 +1697,73 @@ body.ext-ie7 .x-superboxselect-item {
   text-align: center;
   width: 100px;
 }
-.<%= prefix %>-pb-thumb img {
+.modx-pb-thumb img {
   vertical-align: middle;
 }
-.<%= prefix %>-pb-thumb-wrap {
+.modx-pb-thumb-wrap {
   border: 1px solid transparent;
   float: left;
   margin: 4px 0 4px 4px;
   overflow: hidden;
   padding: 4px;
 }
-.<%= prefix %>-pb-thumb-wrap span {
+.modx-pb-thumb-wrap span {
   display: block;
   overflow: hidden;
   text-align: center;
 }
-.<%= prefix %>-pb-view-ct .x-view-over {
+.modx-pb-view-ct .x-view-over {
   border: 1px solid #dddddd;
   padding: 4px;
 }
-.<%= prefix %>-pb-view-ct .x-view-selected {
+.modx-pb-view-ct .x-view-selected {
   background: #DFEDFF;
   border: 1px solid #6593cf;
   padding: 4px;
 }
-.<%= prefix %>-pb-view-ct .x-view-selected .thumb {
+.modx-pb-view-ct .x-view-selected .thumb {
   background: transparent;
 }
-.<%= prefix %>-pb-view-ct .x-view-selected span {
+.modx-pb-view-ct .x-view-selected span {
   color: #1A4D8F;
 }
-.<%= prefix %>-pb-view-ct .loading-indicator {
+.modx-pb-view-ct .loading-indicator {
   background-position: left;
   background-repeat: no-repeat;
   font-size: 11px;
   margin: 10px;
   padding-left: 20px;
 }
-.<%= prefix %>-pb-detail-thumb {
+.modx-pb-detail-thumb {
   cursor: pointer;
   margin-top: 5px;
   text-align: center;
 }
-.<%= prefix %>-pb-details-info {
+.modx-pb-details-info {
   border-top: 1px solid #ccc;
   font: $fontSmall;
   margin-top: 5px;
   padding: 5px;
   text-align: left;
 }
-.<%= prefix %>-pb-details-info b {
+.modx-pb-details-info b {
   color: #555;
   display: block;
   margin-bottom: 4px;
 }
-.<%= prefix %>-pb-details-info span {
+.modx-pb-details-info span {
   display: block;
   margin-bottom: 5px;
   margin-left: 5px;
 }
-.<%= prefix %>-pb-fullview {
+.modx-pb-fullview {
   text-align: center;
 }
 .package-readme {
   padding: 8px 11px 0px;
 }
 /* Template sidebar */
-#<%= prefix %>package-browser-home {
+#modx-package-browser-home {
   margin-top: 5px;
   min-height: 560px;
 }
@@ -1764,54 +1772,54 @@ body.ext-ie7 .x-superboxselect-item {
   font-weight: bold;
   line-height: 1.4;
 }
-.<%= prefix %>-template-detail {
+.modx-template-detail {
   background-color: transparent;
 }
-.<%= prefix %>-template-detail .aside-details {
+.modx-template-detail .aside-details {
   background-color: #FDFDFD;
   border: 1px solid #E0E0E0;
   margin-right: 0;
 }
-.<%= prefix %>-template-detail .selected h5 {
+.modx-template-detail .selected h5 {
   color: $darkNeutral;
   font-size: 14px;
   margin: 10px 0;
 }
-.<%= prefix %>-template-detail .selected img {
+.modx-template-detail .selected img {
   border-radius: 3px;
   border: 1px solid #aaa;
   height: 80px;
   width: 90px;
 }
-.<%= prefix %>-template-detail .item {
+.modx-template-detail .item {
   margin-bottom: 25px;
 }
-.<%= prefix %>-template-detail .item p, .<%= prefix %>-template-detail .item li {
+.modx-template-detail .item p, .modx-template-detail .item li {
   color: #888;
   line-height: 1.4;
 }
-.<%= prefix %>-template-detail .item a {
+.modx-template-detail .item a {
   color: $darkNeutral;
   font-style: italic;
 }
-.<%= prefix %>-template-detail h4 {
+.modx-template-detail h4 {
   color: $darkNeutral;
   font-size: 14px;
   margin: 10px 0;
   text-shadow: 0 1px 0 $white;
   text-transform: uppercase;
 }
-.<%= prefix %>-template-detail .aside-details h4 {
+.modx-template-detail .aside-details h4 {
   font-size: 11px;
   margin-top: 0;
 }
-.<%= prefix %>-template-detail .selected {
+.modx-template-detail .selected {
   border-bottom: 1px solid #E0E0E0;
   color: #5B7A98;
   padding: 15px;
   text-align: center;
 }
-.<%= prefix %>-template-detail .description {
+.modx-template-detail .description {
   background-color: #F3F3F3;
   border-bottom: 1px solid #E0E0E0;
   border-top: 1px solid #FFFFFF;
@@ -1822,25 +1830,25 @@ body.ext-ie7 .x-superboxselect-item {
   padding: 15px;
   text-shadow: 0 1px 0 #FFFFFF;
 }
-.<%= prefix %>-template-detail .infos {
+.modx-template-detail .infos {
   border-top: 1px solid #FFFFFF;
   margin-left: 1px;
   padding: 15px;
 }
-.<%= prefix %>-template-detail .infos ul li {
+.modx-template-detail .infos ul li {
   font-size: 10px;
 }
-.<%= prefix %>-template-detail .infos ul li .infoname {
+.modx-template-detail .infos ul li .infoname {
   color: #AAAAAA;
   font-weight: bold;
   width: 50%;
 }
-.<%= prefix %>-template-detail .infos ul li .infovalue {
+.modx-template-detail .infos ul li .infovalue {
   max-width: 50%;
   padding: 0 8px;
   word-wrap: break-word;
 }
-.<%= prefix %>-template-detail .infos ul li span {
+.modx-template-detail .infos ul li span {
   display: inline-block;
   padding: 0;
 }

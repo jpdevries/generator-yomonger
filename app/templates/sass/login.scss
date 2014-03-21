@@ -34,14 +34,14 @@ body {
   width: 460px;
 }
 
-#<%= prefix %>login-logo {
+#modx-login-logo {
   margin-bottom: 3px;
   img {
     width: 180px;
   }
 }
 
-#<%= prefix %>panel-login-div {
+#modx-panel-login-div {
   border: 1px solid #e0e0e0;
 }
 
@@ -59,7 +59,7 @@ img.loginCaptcha {
   width: 460px;
 }
 
-#<%= prefix %>login-form-panel {
+#modx-login-form-panel {
   border: 1px solid #ddd;
 }
 
@@ -137,7 +137,7 @@ h2 {
   }
 }
 
-.<%= prefix %>-forgot-login {
+.modx-forgot-login {
   float: left;
   padding-top: 4px;
 }
@@ -151,11 +151,11 @@ a {
   }
 }
 
-#<%= prefix %>login-email {
+#modx-login-email {
   width: 200px;
 }
 
-#<%= prefix %>panel-login-div {
+#modx-panel-login-div {
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   background-color: white;
@@ -198,7 +198,7 @@ label {
   width: 50%;
 }
 
-.<%= prefix %>-login-fl-link {
+.modx-login-fl-link {
   cursor: pointer;
   height: auto !important;
   line-height: 18px;
@@ -206,7 +206,7 @@ label {
   white-space: nowrap;
 }
 
-.<%= prefix %>-login-rm-cb {}
+.modx-login-rm-cb {}
 
 
 
@@ -229,7 +229,7 @@ label {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fcfcfc), color-stop(100%, gainsboro));
   background: -webkit-linear-gradient(center bottom, gainsboro 0%, #fcfcfc 100%);
   background: linear-gradient(center bottom, gainsboro 0%, #fcfcfc 100%);
-  background: url(../images/<%= prefix %>theme/form/button-bg.png) repeat-x scroll 0 bottom gainsboro;
+  background: url(../images/modx-theme/form/button-bg.png) repeat-x scroll 0 bottom gainsboro;
   border-radius: 3px;
   border: 2px solid #ddd;
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 1px;
@@ -238,14 +238,14 @@ label {
   font: bold 13px arial, tahoma, helvetica, sans-serif;
   padding: 8px 18px;
 }
-#<%= prefix %>login-btn {
+#modx-login-btn {
   float: right;
   
   &:hover {
     background: #ddd;
   }
 }
-#<%= prefix %>fl-btn {
+#modx-fl-btn {
   margin-left: 0;
 }
 .x-panel-mr {
@@ -254,14 +254,14 @@ label {
 .x-panel-mc {
   padding: 10px 0;
 }
-#<%= prefix %>login-language-select-div {
+#modx-login-language-select-div {
   bottom: 0;
   color: #888;
   left: 0;
   padding: 4px;
   position: absolute;
 }
-#<%= prefix %>login-language-select {
+#modx-login-language-select {
   background: #eee;
   border: 1px solid #aaa;
   position: relative;
