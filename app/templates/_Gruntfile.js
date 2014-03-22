@@ -57,8 +57,8 @@ module.exports = function(grunt) {
 +  '\n*/'
 				},
 				files: {
-					'<%%= dirs.css %>index.min.css': '<%%= dirs.css %>index.css',
-					'<%%= dirs.css %>login.min.css': '<%%= dirs.css %>login.css'
+					'<%%= dirs.css %>index.css': '<%%= dirs.css %>index.css',
+					'<%%= dirs.css %>login.css': '<%%= dirs.css %>login.css'
 				}
 			},
 			ship: {
@@ -87,8 +87,8 @@ module.exports = function(grunt) {
 +  '\n*/'
 				},
 				files: {
-					'<%%= dirs.css %>index.min.css': '<%%= dirs.css %>index.css',
-					'<%%= dirs.css %>login.min.css': '<%%= dirs.css %>login.css'
+					'<%%= dirs.css %>index.css': '<%%= dirs.css %>index.css',
+					'<%%= dirs.css %>login.css': '<%%= dirs.css %>login.css'
 				}
 			}
 		},
@@ -141,13 +141,13 @@ module.exports = function(grunt) {
 			// just prefix the specified file
 			index: {
 				options: {},
-				src: '<%%= dirs.css %>index.min.css',
-				dest: '<%%= dirs.css %>index.min.css'
+				src: '<%%= dirs.css %>index.css',
+				dest: '<%%= dirs.css %>index.css'
 			},
 			login: {
 				options: {},
-				src: '<%%= dirs.css %>login.min.css',
-				dest: '<%%= dirs.css %>login.min.css'
+				src: '<%%= dirs.css %>login.css',
+				dest: '<%%= dirs.css %>login.css'
 			}
 		},
 		csslint: {
