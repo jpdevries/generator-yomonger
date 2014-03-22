@@ -179,6 +179,7 @@ YomongerGenerator.prototype.app = function app() {
   } 
   if(this.useTpl) {
     this.bulkDirectory('default',this.templateDir + this.slug);
+    this.template('_header.tpl', this.templateDir + this.slug + '/header.tpl');
   }
 };
 
