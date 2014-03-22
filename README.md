@@ -141,7 +141,7 @@ grunt build
 ```
 
 __Watch__<br>
-Compile the Sass and watch files for changes type the following:
+Watch files for changes type the following:
 
 ```bash
 grunt
